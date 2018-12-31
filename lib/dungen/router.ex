@@ -15,6 +15,6 @@ defmodule Dungen.Router do
   end
 
   defp message do
-    Poison.encode!(%Dungen.Dungeon{name: Dungen.Generators.nameGenerator, map: Dungen.Generators.dungeonGenerator})
+    Poison.encode!(%Dungen.Dungeon{name: Dungen.Generators.nameGenerator, map: Dungen.Generators.dungeonGenerator(10, 10)})
   end
 end
